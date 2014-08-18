@@ -37,9 +37,13 @@ namespace whoisit.Controllers
             com2.Parameters.Add("@r", SqlDbType.Int).Value=0;
             com2.Parameters.Add("@b", SqlDbType.Bit).Value=false;
             com2.ExecuteNonQuery();
+            SqlCommand com3 = new SqlCommand("CREATE TABLE " + id + "_LIKES([character] nvarchar(max),post nvarchar(max) )", con);
+            com3.ExecuteNonQuery();
+            SqlCommand com4 = new SqlCommand("CREATE TABLE " + id + "_POSTS([character] nvarchar(max),post nvarchar(max) )",con);
+            com4.ExecuteNonQuery();
             con.Close();
             var resp = Request.CreateResponse<string>(HttpStatusCode.Created, id);
-            resp.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = id }));
+            resp.Headers.Location = new Uri(Url.Link("DefaultApi", new { phone = phone }));
             return resp;
         }
         public HttpResponseMessage Getid(string phone)
@@ -64,6 +68,19 @@ namespace whoisit.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
+        }
+        public HttpResponseMessage PutBan(string id)
+        {
+
+            SqlConnection con = new SqlConnection("Data Source=b471cd39-9c59-46a9-b4d9-a38b00a748aa.sqlserver.sequelizer.com;Initial Catalog=dbb471cd399c5946a9b4d9a38b00a748aa;Persist Security Info=True;User ID=szssaqjrgsgntzbv;Password=YZzoxqA7hHMpQdX5HNyHktmroFS8DjCgEmyWvk6ABTJAahan4t7fFBNEMhaYEBA6");
+            con.Open();
+            SqlCommand com = new SqlCommand("UPDATE users SET banned=@t WHERE id=@i", con);
+            com.Parameters.Add("@i", SqlDbType.NVarChar).Value = id;
+            com.Parameters.Add("@t", SqlDbType.Bit).Value = true;
+            com.ExecuteNonQuery();
+            con.Close();
+            var resp = Request.CreateResponse<string>(HttpStatusCode.Created, id);
+            return resp;
         }
         
     }
