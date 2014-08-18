@@ -30,7 +30,7 @@ namespace whoisit.Controllers
             Random r = new Random();
             do
             {
-                id = "";
+                id = "C";
                 for (int i = 0; i < 16; i++)
                     id += chars[r.Next(0, chars.Length)];
                 SqlCommand com = new SqlCommand("SELECT * FROM characters WHERE id=@i", con);
