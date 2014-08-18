@@ -81,9 +81,9 @@ namespace whoisit.Controllers
             com2.Parameters.Add("@u", SqlDbType.NVarChar).Value = poster;
             com2.ExecuteNonQuery();
             SqlCommand com3 = new SqlCommand("DELETE " + poster + "_POSTS WHERE [character]=@c AND post=@p", con);
-            com2.Parameters.Add("@c", SqlDbType.NVarChar).Value = character;
-            com2.Parameters.Add("@u", SqlDbType.NVarChar).Value = id;
-            com2.ExecuteNonQuery();
+            com3.Parameters.Add("@c", SqlDbType.NVarChar).Value = character;
+            com3.Parameters.Add("@p", SqlDbType.NVarChar).Value = id;
+            com3.ExecuteNonQuery();
             con.Close();
             var resp = Request.CreateResponse<string>(HttpStatusCode.OK, id);
             return resp;
