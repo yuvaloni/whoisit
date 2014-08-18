@@ -58,7 +58,6 @@ namespace whoisit.Controllers
                 var resp = Request.CreateResponse<string>(HttpStatusCode.Found, r.GetString(1));
                 r.Close();
                 con.Close();
-                resp.Headers.Location = new Uri(Url.Link("DefaultApi", new { phone = phone }));
                 return resp;
             }
             else
