@@ -43,7 +43,6 @@ namespace whoisit.Controllers
             com4.ExecuteNonQuery();
             con.Close();
             var resp = Request.CreateResponse<string>(HttpStatusCode.Created, id);
-            resp.Headers.Location = new Uri(Url.Link("DefaultApi", new { phone = phone }));
             return resp;
         }
         public HttpResponseMessage Getid(string phone)
