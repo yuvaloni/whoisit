@@ -74,9 +74,9 @@ namespace whoisit.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
             r3.Close();
-          
 
-            SqlCommand com2 = new SqlCommand("DELETE " + character + "_CHARACTER WHERE id = @i AND user = @u", con);
+
+            SqlCommand com2 = new SqlCommand("DELETE " + character + "_CHARACTER WHERE id=@i AND [user]=@u", con);
             com2.Parameters.Add("@i", SqlDbType.NVarChar).Value = id;
             com2.Parameters.Add("@u", SqlDbType.NVarChar).Value = poster;
             com2.ExecuteNonQuery();
