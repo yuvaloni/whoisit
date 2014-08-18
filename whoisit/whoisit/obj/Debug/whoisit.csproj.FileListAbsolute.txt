@@ -1,0 +1,14 @@
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\whoisit.dll.config
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\whoisit.dll
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\whoisit.pdb
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\Newtonsoft.Json.dll
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\System.Net.Http.Formatting.dll
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\System.Web.Http.dll
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\System.Web.Http.WebHost.dll
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\Newtonsoft.Json.xml
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\System.Net.Http.Formatting.xml
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\System.Web.Http.xml
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\bin\System.Web.Http.WebHost.xml
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\obj\Debug\whoisit.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\obj\Debug\whoisit.dll
+C:\Users\user\Documents\GitHub\whoisit\whoisit\whoisit\obj\Debug\whoisit.pdb
