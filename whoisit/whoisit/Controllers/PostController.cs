@@ -25,7 +25,7 @@ namespace whoisit.Controllers
             }
             r3.Close();
             string chars = "1234567890qwertyuiopasdfghjklzxcvbnm";
-            string id = "";
+            string id = "P";
             bool exists;
             Random r = new Random();
             do

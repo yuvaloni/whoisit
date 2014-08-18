@@ -15,7 +15,7 @@ namespace whoisit.Controllers
             SqlConnection con = new SqlConnection("Data Source=b471cd39-9c59-46a9-b4d9-a38b00a748aa.sqlserver.sequelizer.com;Initial Catalog=dbb471cd399c5946a9b4d9a38b00a748aa;Persist Security Info=True;User ID=szssaqjrgsgntzbv;Password=YZzoxqA7hHMpQdX5HNyHktmroFS8DjCgEmyWvk6ABTJAahan4t7fFBNEMhaYEBA6");
             string chars = "1234567890qwertyuiopasdfghjklzxcvbnm";
             con.Open();
-            string id = "";
+            string id = "U";
             bool exists;
             Random r = new Random();
             do

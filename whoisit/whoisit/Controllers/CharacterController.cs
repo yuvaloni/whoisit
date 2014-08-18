@@ -25,7 +25,7 @@ namespace whoisit.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
             r3.Close();
-            string id = "";
+            string id = "C";
             bool exists;
             Random r = new Random();
             do
