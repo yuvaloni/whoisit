@@ -28,7 +28,7 @@ namespace whoisit.Controllers
 
             SqlCommand com2 = new SqlCommand(" SELECT * from " + character + "_CHARACTER", con);
             SqlDataReader r2 = com2.ExecuteReader();
-            List<string> posts = new List<string>()
+            List<string> posts = new List<string>();
             while(r2.Read())
             {
                 posts.Add(r2.GetString(0));
